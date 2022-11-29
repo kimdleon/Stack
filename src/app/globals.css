@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.button {
+  @apply text-xl font-semibold text-gray-700 hover:text-yellow-300 sm:hover:text-green-700 md:hover:text-red-500;
+
+  font-style: italic;
+}
