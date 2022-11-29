@@ -11,6 +11,45 @@ const t = initTRPC.create({
 })
 
 export const appRouter = t.router({
+  getChat: t.procedure
+    .input(z.object({ userId: z.number() }))
+    .query(({ input }) => {
+      return prisma.chatMessage.findMany({
+        where: {
+          user: {
+            id: input.userId,
+          },
+        },
+        take: -10,
+        select: {
+          id: true,
+          msg: true,
+        },
+      })
+    }),
+  addUser: t.procedure
+    .input(z.object({ username: z.string() }))
+    .mutation(async ({ input, ctx }) => {
+      await prisma.chatUser.create({
+        data: {
+          username: input.username,
+        },
+      })
+    }),
+  addChat: t.procedure
+    .input(z.object({ userId: z.number(), userMsg: z.string() }))
+    .mutation(async ({ input }) => {
+      await prisma.chatUser.update({
+        where: {
+          id: input.userId,
+        },
+        data: {
+          messages: {
+            create: [{ msg: input.userMsg }],
+          },
+        },
+      })
+    }),
   getNote: t.procedure.input(z.string()).query(({ input }) => {
     return prisma.note.findUnique({
       where: {

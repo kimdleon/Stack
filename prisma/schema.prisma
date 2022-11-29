@@ -14,3 +14,16 @@ model Note {
   id String @id @default(cuid())
   content String
 }
+
+model ChatUser {
+  id Int @id @default(autoincrement())
+  username String
+	messages ChatMessage[]
+}
+
+model ChatMessage {
+  id Int @id @default(autoincrement())
+  user ChatUser @relation(fields: [userId], references: [id])
+	userId Int
+	msg String
+}

@@ -1,9 +1,10 @@
+import Link from 'next/link'
 import { StateSample } from './StateSample'
 
 export default function Home() {
   return (
-    	<div>
-      <h1>Sample zustand</h1>
+    <div>
+      <Link href="/chat">Feature sample - Chat</Link>
       <StateSample />
     </div>
   )
