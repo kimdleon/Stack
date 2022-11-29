@@ -8,14 +8,12 @@ interface ExampleState {
 
 export const useExample = create<ExampleState>()(
   devtools(
-    persist(
-      (set) => ({
-        count: 0,
-        increase: (by) => set((state) => ({ count: state.count + by })),
-      }),
-      {
-        name: 'example-storage',
-      }
-    )
+    (set) => ({
+      count: 0,
+      increase: (by) => set((state) => ({ count: state.count + by })),
+    }),
+    {
+      name: 'example-storage',
+    }
   )
 )
