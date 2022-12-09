@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.button {
-  @apply text-xl font-semibold text-gray-700 hover:text-yellow-300 sm:hover:text-green-700 md:hover:text-red-500;
+.prose-sm {
+  @apply text-xs font-medium text-gray-700;
+}
 
-  font-style: italic;
+.prose-md {
+  @apply text-sm font-medium text-gray-700;
+}
+
+.prose-lg {
+  @apply text-base font-medium text-gray-700;
 }

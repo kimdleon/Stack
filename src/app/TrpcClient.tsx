@@ -2,9 +2,9 @@
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { httpBatchLink, loggerLink } from '@trpc/client'
+import { getBaseUrl, trpcHook } from '@utils/trpcHook'
 import React, { useState } from 'react'
 import superjson from 'superjson'
-import { getBaseUrl, trpcHook } from '../utils/trpcHook'
 
 export const Trpcclient: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [queryClient] = useState(() => new QueryClient())

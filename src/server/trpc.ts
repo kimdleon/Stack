@@ -29,7 +29,7 @@ export const appRouter = t.router({
     }),
   addUser: t.procedure
     .input(z.object({ username: z.string() }))
-    .mutation(async ({ input, ctx }) => {
+    .mutation(async ({ input }) => {
       await prisma.chatUser.create({
         data: {
           username: input.username,

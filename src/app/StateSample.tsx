@@ -1,6 +1,6 @@
 'use client'
 
-import { useExample } from '../hooks/useExample'
+import { useExample } from '@hooks/useExample'
 
 export const StateSample = () => {
   const exampleCount = useExample((state) => state.count)

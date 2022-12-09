@@ -1,7 +1,7 @@
 'use client'
 
+import { trpcHook } from '@utils/trpcHook'
 import { useCallback, useMemo, useState } from 'react'
-import { trpcHook } from '../../utils/trpcHook'
 
 export const Chat = () => {
   const [chat, setChat] = useState('')
@@ -41,6 +41,7 @@ export const Chat = () => {
       )}
       <button onClick={addChat}>Enter</button>
       <input
+        id="chatbox"
         className="w-pc border-2 border-red-300"
         onChange={handleChat}
         value={chat}
