@@ -8,4 +8,11 @@ describe('Atom:Button', () => {
     const button = screen.getByText('Login')
     expect(button).toBeInTheDocument()
   })
+
+  it('renders a button with a Submit text', () => {
+    render(<Button>Submit</Button>)
+
+    const button = screen.getByText('Submit')
+    expect(button).toBeInTheDocument()
+  })
 })

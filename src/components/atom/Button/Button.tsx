@@ -1,10 +1,15 @@
 import clsx from 'clsx'
 import React from 'react'
 
+export type ButtonTypes = 'button' | 'reset' | 'submit'
+export type Sizes = 'sm' | 'md' | 'lg'
+export type ExtraSizes = 'xs' | 'xl'
+
 interface ButtonProps {
-  type?: 'button' | 'reset' | 'submit'
+  type?: ButtonTypes
   onClick?: () => void
-  size?: 'sm' | 'md' | 'lg'
+  size?: Sizes | ExtraSizes
+  disabled?: boolean
 }
 
 export const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
@@ -12,6 +17,7 @@ export const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
   onClick,
   type = 'button',
   size = 'sm',
+  disabled,
 }) => {
   return (
     <button
@@ -23,6 +29,7 @@ export const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
         size === 'md' && 'prose-md px-4 py-2',
         size === 'lg' && 'prose-lg px-6 py-3'
       )}
+      disabled={disabled}
     >
       {children}
     </button>

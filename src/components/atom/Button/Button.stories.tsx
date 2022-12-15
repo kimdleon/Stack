@@ -13,3 +13,9 @@ Size.args = {
   size: 'sm',
   children: 'Small Button',
 }
+
+export const LargeButton = Template.bind({})
+LargeButton.args = {
+  size: 'lg',
+  children: 'Large Button',
+}
