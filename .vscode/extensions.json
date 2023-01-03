@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "mrmlnc.vscode-autoprefixer",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-complete-tag",
+    "pranaygp.vscode-css-peek",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "ecmel.vscode-html-css",
+    "wix.vscode-import-cost",
+    "esbenp.prettier-vscode",
+    "prisma.prisma",
+    "stylelint.vscode-stylelint",
+    "bradlc.vscode-tailwindcss",
+    "pflannery.vscode-versionlens",
+    "heybourn.headwind"
+  ]
+}

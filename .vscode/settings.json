@@ -1,0 +1,36 @@
+{
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.fontLigatures": true,
+  "editor.mouseWheelZoom": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.packageManager": "yarn",
+  "npm.packageManager": "yarn",
+  "stylelint.packageManager": "yarn",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true
+  },
+  "editor.formatOnSave": true,
+  "autoprefixer.formatOnSave": true,
+  "editor.accessibilitySupport": "off",
+  "editor.wordWrap": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.renderWhitespace": "all",
+  "tailwindCSS.experimental.classRegex": [
+    "tw`([^`]*)", // tw`...`
+    "tw\\..+`([^`]*)", // tw.xxx<xxx>`...`
+    "tw\\(.*?\\).*?`([^`]*)" // tw(Component)<xxx>`...`
+  ],
+  "editor.linkedEditing": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
+}
