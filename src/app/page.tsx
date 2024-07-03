@@ -12,7 +12,7 @@ export default function Home() {
   }
   return (
     <div>
-      <Link href="/chat">Feature sample - Chat</Link>
+      <Link href="/chat">Chatbotttttttttttttt</Link>
       <StateSample />
       <input onChange={handleOnChange} />
       <Button disabled={name !== 'abc'} type="submit" size="sm">
